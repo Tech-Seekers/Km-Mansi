@@ -1,0 +1,56 @@
+body{
+  margin: 0px;
+  padding:0px;
+  box-sizing: border-box;
+  background-color: black;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.movie-screen{
+  width: 1338.5px;
+  height: 20px;
+  background-color: rgb(15, 89, 92);
+  margin-bottom: 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  width: 1200x;
+  color: aliceblue;
+  
+  
+}
+
+.seat-area {
+  width: 150vh;
+  height: 150vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0;
+  
+  
+}
+.seat {
+  max-height: 165px;
+  max-width: 165px;
+  border-radius: 2px;
+  background-size:contain;
+  box-sizing: border-box;
+  /*background-image: url('Assets/empty.jpg');*/
+  background-color: darkcyan;
+  align-items: center;
+}
+.seat:hover {
+  background-color: rgb(4, 90, 90);
+}
+/*.booked {
+  background-image: url('Assets/booked.jpg');
+
+  }*/

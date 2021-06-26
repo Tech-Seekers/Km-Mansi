@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <title>Memorey Game</title>
+
+   
+    <script src="mainJS.js"></script>
+    <script src="card.js"></script>
+    <script src="game.js"></script>
+
+   
+    <link rel="stylesheet" href="mainCSS.css">
+
+    
+    <link rel="shortcut icon" href="cards/0.png" type="image/x-icon">
+</head>
+
+<body onload="start();">
+    
+  
+    <header>
+        <div class="paddup" style="color: white; font-size: x-large;">
+            Cards found:
+            <span id="limitOutput"></span>/<span id="scoreOutput">0</span>,
+            Clicks:
+            <span id="clicks">0</span>
+        </div>
+
+        <div class="paddup">
+            <input onchange="changeLimit()" type="range" id="range" min="4" max="24">
+        </div>
+
+        <div class="paddup">
+            <input type="button" value="play" id="play" onclick="play();">
+        </div>
+
+        <div id="win"></div>
+    </header>
+
+  
+    <main id="main"></main>
+
+   
+
+</body>
+</html>

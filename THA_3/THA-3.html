@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        .container {
+            margin-top: 50px;
+            background-color: black;
+            margin-bottom: 50px;
+        }
+        
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        
+        .data {
+            margin-left: 30px;
+            margin-top: -25px;
+        }
+        
+        .bar {
+            list-style: none;
+        }
+        
+        .bar>li {
+            position: relative;
+        }
+        
+        .bar>li:before {
+            content: '\25CF';
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .bar>li:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            border-left: 2px solid black;
+            margin-left: 5px;
+            height: 120%;
+        }
+        
+        .bar>li:first-of-type:after {
+            top: 27%;
+        }
+        
+        .bar>li:last-of-type:after {
+            top: -23%;
+        }
+        
+        .ba {
+            list-style: none;
+        }
+        
+        .ba>li {
+            position: relative;
+        }
+        
+        .ba>li:before {
+            content: '\25CF';
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .ba>li:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            border-left: 2px solid black;
+            margin-left: 5px;
+            height: 120%;
+        }
+        
+        .ba>li:first-of-type:after {
+            top: 44%;
+        }
+        
+        .ba>li:last-of-type:after {
+            top: -50%;
+        }
+        
+        .barr {
+            list-style: none;
+        }
+        
+        .barr>li {
+            position: relative;
+        }
+        
+        .barr>li:before {
+            content: '\25CF';
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .barr>li:after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            border-left: 2px solid black;
+            margin-left: 5px;
+            height: 120%;
+        }
+        
+        .barr>li:first-of-type:after {
+            top: 27%;
+        }
+        
+        .barr>li:last-of-type:after {
+            top: -26%;
+        }
+        
+        .abc p {
+            margin-left: 24px;
+        }
+        
+        #myProgress-1 {
+            margin-left: 25px;
+            width: 50%;
+            background-color: rgb(180, 180, 180);
+            margin-left: 200px;
+            margin-top: -32px;
+        }
+        
+        #myBar-1 {
+            width: 80%;
+            height: 10px;
+            background-color: rgb(145, 144, 144);
+        }
+        
+        #myProgress-2 {
+            margin-left: 25px;
+            width: 50%;
+            background-color: rgb(180, 180, 180);
+            margin-left: 200px;
+            margin-top: -32px;
+        }
+        
+        #myBar-2 {
+            width: 40%;
+            height: 10px;
+            background-color: rgb(145, 144, 144);
+        }
+        
+        #myProgress-3 {
+            margin-left: 25px;
+            width: 50%;
+            background-color: rgb(180, 180, 180);
+            margin-left: 200px;
+            margin-top: -32px;
+        }
+        
+        #myBar-3 {
+            width: 80%;
+            height: 10px;
+            background-color: rgb(145, 144, 144);
+        }
+        
+        #myProgress-4 {
+            margin-left: 25px;
+            width: 50%;
+            background-color: rgb(180, 180, 180);
+            margin-left: 200px;
+            margin-top: -32px;
+        }
+        
+        #myBar-4 {
+            width: 83%;
+            height: 10px;
+            background-color: rgb(145, 144, 144);
+        }
+        
+        .skills p {
+            margin-left: 40px;
+        }
+        
+        h6 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font: bolder;
+            font-size: 30px;
+        }
+        
+        h3,
+        h5 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font: bolder;
+            font-size: 30px;
+        }
+        
+        .hobbies li {
+            margin-left: 24px;
+        }
+        
+        .hobbies {
+            margin-bottom: 30px;
+        }
+        
+        hr {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="fluid-container">
+            <div class="row">
+                <div class="col-4" style="background-color: rgb(165, 164, 164); margin-left: 95px; margin-top: 40px; margin-bottom: 40px;">
+                    
+                    <h3 align="center" style="margin-top: 40px;">KM MANSI</h3>
+                    <h8 align="center" style="margin-left: 30px;">INFORMATION TECHNOLOGOY STUDENT</h8>
+                    <br>
+                    <hr>
+                    <br>
+                    <h6><u>ABOUT ME</u></h6>
+                    <p>An Under-Graduate student possesses skills in Python Programming, Web Development, Android Development, C Programming and also Content Writing, Blogging, Front-end as a hobby Skills. Optimistic person and Self-Motivating, Believe in
+                        Hard Work and Continuous Practice with infinite dreams in various fields. The major dream I possess is to be a Social Worker and want to do something challenging and demanding in the upcoming scenario. I am challenging my own expectations,
+                        always trying to achieve a little more in every field.
+                    </p>
+                    <br>
+                    <hr>
+                    <br>
+                    <h6><u>INFO</u></h6>
+                    <div class="mail">
+                        <i class="fa fa-envelope" aria-hidden="true" style="font-size: 20px;"></i>
+
+                    </div>
+                    <div class="data">mansi14400@gmail.com</div>
+                    <br>
+                    <div class="address">
+                        <i class="fa fa-map-marker" aria-hidden="true" style="font-size: 20px;"></i>
+
+                    </div>
+                    <div class="data">Muzaffarnagar, India</div>
+                    <br>
+                    <div class="phone-number">
+                        <i class="fa fa-mobile" aria-hidden="true" style="font-size: 20px;"></i>
+
+                    </div>
+                    <div class="data"> +91 7900503078</div>
+                    <br>
+                    <div class="github">
+                        <i class="fa fa-github" aria-hidden="true" style="font-size: 20px;"></i>
+
+                    </div>
+                    <div class="data">https://github.com/Mansi144000</div>
+                    <br>
+                    <div class="linkedIn">
+                        <i class="fa fa-linkedin" aria-hidden="true" style="font-size: 20px;"></i>
+
+                    </div>
+                    <div class="data">https://www.linkedin.com/in/km-mansi-783b76193/</div>
+
+                </div>
+                <div class="col-6 abc" style="background-color: rgb(230, 228, 228); margin-top: 40px;margin-bottom: 40px;">
+                    <div class="edu">
+                        <h6 style="margin-top: 40px;"><u>EDUCATION</u></h6>
+                        <ul class="bar">
+                            <li><b>B.Tech(Hons.)-Informational Technology Engineering</b>
+                                <p>KIET Group of Instituions,Ghaziabad,Uttar Pradesh<br><i>2018-present</i></p>
+                                </p>
+                            </li>
+                            <li><b>12th</b>
+                                <p>Bhagwanti Saraswati Vidhya Mandir Inter College, Muzaffarnagar,Uttar Pradesh<br><i>2018</i></p>
+                            </li>
+                            <li><b>10th</b>
+                                <p>Bhagwanti Saraswati Vidhya Mandir Inter College, Muzaffarnagar,Uttar Pradesh<br><i>2016</i></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="skills">
+                        <h6><u>SKILLS</u></h6>
+                        <p>Web Development</p>
+
+                        <div id="myProgress-1">
+                            <div id="myBar-1"></div>
+                        </div>
+                        <br>
+                        <p>Android Development</p>
+
+                        <div id="myProgress-2">
+                            <div id="myBar-2"></div>
+                        </div>
+                        <br>
+                        <p>JAVA</p>
+
+                        <div id="myProgress-3">
+                            <div id="myBar-3"></div>
+                        </div>
+                        <br>
+                        <p>WordPress</p>
+
+                        <div id="myProgress-4">
+                            <div id="myBar-4"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="certi">
+                        <h6><u>CERTIFICATES</u></h6>
+                        <ul class="ba">
+                            <li>Building Scalable Java Microservices with Spring Boot
+
+                            </li>
+                            <li>Programming in JAVA</li>
+                            <li>Industry 4.0 & Industrial Internet of Things</li>
+                            <li>Technical Support Fundamentals</li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="exp">
+                        <h6><u>WORK EXPERIENCE</u></h6>
+                        <ul class="barr">
+                            <li><b>Mediapur Production & Events LLP</b><br>
+                                <p>Social Media Marketing<br><i>28/06/2020-29/07/2020</i></p>
+                            </li>
+                            <li><b>Managersadda</b><br>
+                                <p>Campus Ambassador<br>Present</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="project">
+                        <h6><u>PROJECTS</u></h6>
+                        <ul class="pro">
+                            <li style="margin-left: 20px;"><b>Telecom Management System</b></li>
+                            <p>Technology Used: Core Java + JSP Servlets + Hibernate +Spring + Java Web-service/RestFul API</p>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="hobbies">
+                        <h6><u>HOBBIES</u></h6>
+                        <ul>
+                            <li>Sketching</li>
+                            <li>Music</li>
+                            <li>Coding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

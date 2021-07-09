@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.App{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.card{
+    border: 10px solid rgb(100, 3, 3);
+    padding: 10px 10px;
+    width: 400px;
+    display: inline-block;
+    margin: auto;
+}
+
+.card img{
+    width: 100%;
+
+}
+
+.card h3{
+    color: rgb(100, 3, 3);
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
